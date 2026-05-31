@@ -1,0 +1,110 @@
+library(shiny)
+library(ggplot2)
+library(dplyr)
+library(DT)
+library(readr)
+
+# Load dataset
+data <- read_csv("Waiting Time Survey of govt hospitals.xlsx - Form responses.csv")
+
+# Add token numbers
+data$Token <- 1:nrow(data)
+
+# UI
+ui <- fluidPage(
+  
+  titlePanel("Smart Queue and Token Management System"),
+  
+  sidebarLayout(
+    
+    sidebarPanel(
+      
+      selectInput(
+        "hospital",
+        "Select Hospital",
+        choices = unique(data$`Government Hospital in Kolkata`)
+      ),
+      
+      selectInput(
+        "department",
+        "Select Department",
+        choices = unique(data$`Treatment department`)
+      )
+    ),
+    
+    mainPanel(
+      
+      tabsetPanel(
+        
+        tabPanel(
+          "Queue Data",
+          DTOutput("table")
+        ),
+        
+        tabPanel(
+          "Waiting Time Analysis",
+          plotOutput("waitPlot")
+        ),
+        
+        tabPanel(
+          "Department Analysis",
+          plotOutput("deptPlot")
+        )
+      )
+    )
+  )
+)
+
+# SERVER
+server <- function(input, output) {
+  
+  filtered_data <- reactive({
+    
+    data %>%
+      filter(
+        `Government Hospital in Kolkata` == input$hospital,
+        `Treatment department` == input$department
+      )
+  })
+  
+  # Table
+  output$table <- renderDT({
+    
+    datatable(filtered_data())
+  })
+  
+  # Waiting time graph
+  output$waitPlot <- renderPlot({
+    
+    ggplot(filtered_data(),
+           aes(x = `Waiting time (in minutes)`)) +
+      
+      geom_bar(fill = "steelblue") +
+      
+      labs(
+        title = "Waiting Time Distribution",
+        x = "Waiting Time",
+        y = "Number of Patients"
+      )
+  })
+  
+  # Department graph
+  output$deptPlot <- renderPlot({
+    
+    ggplot(data,
+           aes(x = `Treatment department`)) +
+      
+      geom_bar(fill = "darkgreen") +
+      
+      theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+      
+      labs(
+        title = "Patients by Department",
+        x = "Department",
+        y = "Count"
+      )
+  })
+}
+
+# Run App
+shinyApp(ui = ui, server = server)
