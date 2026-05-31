@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Medi-Tech | Smart OPD Booking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="final.css">
+</head>
+
+<body>
+    <header class="nav">
+        <div class="brand">
+            <div class="logo"><img src="./image.png" alt=""></div>
+            Medi-Tech
+        </div>
+        <nav>
+            <a href="#" data-route="home">Home</a>
+            <a href="#" data-route="about">About</a>
+            <a href="#" data-route="contact">Contact</a>
+            <a href="#" data-route="feedback">Feedback</a>
+        </nav>
+        <div class="translate-box">
+        <div id="google_translate_element"></div>
+    </div>
+        <button class="btn btn-primary" id="navGetStarted" data-route="login">Get Started</button>
+    </header>
+
+    <main>
+        <!-- HOME -->
+        <section class="page active" id="page-home">
+            <div class="hero">
+                <h1>Book Hospital Appointments Online – Skip the Queue!</h1>
+                <button class="btn btn-lg btn-primary" data-route="login">Get Started →</button>
+            </div>
+
+            <div class="vision">
+                <h2>Our Vision</h2>
+                <p>To make healthcare accessible, efficient and transparent for every patient in India, especially those
+                    in rural and remote areas.</p>
+            </div>
+            <div class="grid3">
+                <div class="card">
+                    <h3>Who We Are</h3>
+                    <ol>
+                        <li>Medi-Tech is a student-led team using technology to solve real healthcare challenges.</li>
+                        <li>We’re building a Smart Queue & Token Management System for OPD.</li>
+                    </ol>
+                </div>
+
+                <div class="card">
+                    <h3>The Problem We Solve</h3>
+                    <ol>
+                        <li>Long queues and no online OPD booking in many gov. hospitals.</li>
+                        <li>Patients travel multiple times just to register.</li>
+                        <li>No central platform for availability.</li>
+                        <li>No real-time updates on waiting times.</li>
+                    </ol>
+                </div>
+
+                <div class="card">
+                    <h3>Our Solution</h3>
+                    <ol>
+                        <li>Search hospitals by state & district.</li>
+                        <li>Book OPD with OTP verification.</li>
+                        <li>Real-time token view.</li>
+                        <li>Instant digital receipt (JPG).</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOGIN -->
+        <section class="page" id="page-login">
+            <div class="panel">
+                <h2>Login As:</h2>
+                <div class="btn-col">
+                    <button class="btn btn-white" data-route="hospital-login">Hospital Staff</button>
+                    <button class="btn btn-primary" data-route="doctor-login">Doctor</button>
+                    <button class="btn btn-primary" data-route="patient-lookup">Patient / User</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOSPITAL STAFF LOGIN -->
+        <section class="page" id="page-hospital-login">
+            <div class="panel">
+                <h2>Staff Login:</h2>
+                <form id="hospitalStaffLoginForm">
+                    <label>Hospital Email
+                        <input type="email" id="hospitalEmail" placeholder="enter hospital email" required />
+                    </label>
+
+                    <div class="row">
+                        <button type="button" class="btn" id="sendHospitalOtp">Send OTP</button>
+                        <span id="hospitalOtpSentMsg" class="muted"></span>
+                    </div>
+
+                    <label>Enter OTP:
+                        <input type="text" id="hospitalOtpInput" maxlength="6" placeholder="6-digit code" />
+                    </label>
+
+                    <div class="row gap">
+                        <button type="button" class="btn" data-route="login">← Back</button>
+                        <button type="submit" class="btn btn-primary" id="hospitalLoginBtn" disabled>Login</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- DOCTOR LOGIN -->
+        <section class="page" id="page-doctor-login">
+            <div class="panel">
+                <h2>Doctor Login:</h2>
+                <form id="doctorLoginForm">
+                    <label>Hospital Email
+                        <input type="email" id="doctorEmail" placeholder="enter hospital email" required />
+                    </label>
+
+                    <div class="row">
+                        <button type="button" class="btn" id="sendDoctorOtp">Send OTP</button>
+                        <span id="doctorOtpSentMsg" class="muted"></span>
+                    </div>
+
+                    <label>Enter OTP:
+                        <input type="text" id="doctorOtpInput" maxlength="6" placeholder="6-digit code" />
+                    </label>
+
+                    <div class="row gap">
+                        <button type="button" class="btn" data-route="login">← Back</button>
+                        <button type="submit" class="btn btn-primary" id="doctorLoginBtn" disabled>Login</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- STAFF DASHBOARD -->
+        <section class="page" id="page-staff-dashboard">
+            <div class="panel">
+                <div class="dashboard-header">
+                    <h2>Staff Dashboard</h2>
+                    <button class="btn" data-route="login">Logout</button>
+                </div>
+
+                <h3>Set Maximum Token:</h3>
+                <div class="departments-grid">
+                    <div class="department-card">
+                        <div class="department-icon">💓</div>
+                        <h4>Cardiac Sciences</h4>
+                        <input type="number" class="max-token-input" placeholder="Max" data-dept="cardiac" />
+                    </div>
+
+                    <div class="department-card">
+                        <div class="department-icon">🦷</div>
+                        <h4>Dental Science</h4>
+                        <input type="number" class="max-token-input" placeholder="Max" data-dept="dental" />
+                    </div>
+
+                    <div class="department-card">
+                        <div class="department-icon">👩‍⚕️</div>
+                        <h4>Dermatology</h4>
+                        <input type="number" class="max-token-input" placeholder="Max" data-dept="dermatology" />
+                    </div>
+
+                    <div class="department-card">
+                        <div class="department-icon">🩸</div>
+                        <h4>Diabetology/Endocrinology</h4>
+                        <input type="number" class="max-token-input" placeholder="Max" data-dept="diabetology" />
+                    </div>
+
+                    <div class="department-card">
+                        <div class="department-icon">👂</div>
+                        <h4>ENT</h4>
+                        <input type="number" class="max-token-input" placeholder="Max" data-dept="ent" />
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="saveMaxTokens">Save Settings</button>
+            </div>
+        </section>
+
+        <!-- DOCTOR DASHBOARD -->
+        <section class="page" id="page-doctor-dashboard">
+            <div class="panel">
+                <div class="dashboard-header">
+                    <h2>Doctor Dashboard</h2>
+                    <button class="btn" data-route="login">Logout</button>
+                </div>
+
+                <div class="token-display">
+                    <div>
+                        <strong>Token No.</strong>
+                        <span class="token-number" id="currentTokenNo">1</span>
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <button class="btn btn-primary" id="markDone">Done</button>
+                        <button class="btn" id="markWaiting">Waiting</button>
+                    </div>
+                </div>
+
+                <div class="row gap" style="margin-top: 20px;">
+                    <button class="btn" id="prevToken">← Previous</button>
+                    <button class="btn btn-primary" id="nextToken">Next →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PATIENT LOOKUP: State → District → Hospital -->
+        <!-- <section class="page" id="page-patient-lookup">
+            <div class="panel">
+                <h2>Select Hospital</h2>
+                <label>State
+                    <select id="stateSelect">
+                        <option value="">-- Select State --</option>
+                    </select>
+                </label>
+
+                <label>District
+                    <select id="districtSelect" disabled>
+                        <option value="">-- Select District --</option>
+                    </select>
+                </label>
+
+                <label>Hospital
+                    <select id="hospitalSelect" disabled>
+                        <option value="">-- Select Hospital --</option>
+                    </select>
+                </label> -->
+                <section class="page" id="page-patient-lookup">
+
+                    <div class="panel">
+                    
+                    <h2>Select Hospital</h2>
+                    
+                    <label>State
+                    <select id="stateSelect">
+                    <option value="">-- Select State --</option>
+                    </select>
+                    </label>
+                    
+                    <label>District
+                    <select id="districtSelect" disabled>
+                    <option value="">-- Select District --</option>
+                    </select>
+                    </label>
+                    
+                    <label>Hospital
+                    <select id="hospitalSelect" disabled>
+                    <option value="">-- Select Hospital --</option>
+                    </select>
+                    </label>
+                    
+                    </div>
+                    
+                    </section>
+                <!-- <select id="stateSelect">
+                    <option>Select State</option>
+                    <option>West Bengal</option>
+                    <option>Delhi</option>
+                    <option>Maharashtra</option>
+                    <option>Tamil Nadu</option>
+                    <option>Karnataka</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Gujarat</option>
+                    <option>Rajasthan</option>
+                    </select>
+                    
+                    <select id="hospitalSelect">
+                    <option>Select Hospital</option>
+                    </select> -->
+
+                <div class="row gap">
+                    <button class="btn" data-route="login">← Back</button>
+                    <button class="btn btn-primary" id="goOtp" disabled>Continue</button>
+                </div>
+            </div>
+        </section>
+        <!-- OTP -->
+        <section class="page" id="page-otp">
+            <div class="panel">
+                <h2>OPD Registration – OTP Verification</h2>
+
+                <label>Phone or Email
+                    <input id="contactInput" type="text" placeholder="9876543210 or name@example.com" />
+                </label>
+
+                <div class="row">
+                    <button class="btn" id="sendOtp">Send OTP</button>
+                    <span id="otpSentMsg" class="muted"></span>
+                </div>
+
+                <label>Enter OTP
+                    <input id="otpInput" type="text" maxlength="6" placeholder="6-digit code" />
+                </label>
+
+                <div class="row gap">
+                    <button class="btn" data-route="patient-lookup">← Back</button>
+                    <button class="btn btn-primary" id="verifyOtp" disabled>Verify</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TREATMENTS -->
+        <section class="page" id="page-treatments">
+            <div class="panel">
+                <h2>Available Treatments</h2>
+                <p class="muted">Hospital: <span id="chosenHospitalName"></span></p>
+                <div id="treatmentsList" class="list"></div>
+
+                <div class="row gap">
+                    <button class="btn" data-route="otp">← Back</button>
+                    <button class="btn btn-primary" id="goAppointment" disabled>Book Appointment</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- APPOINTMENT FORM -->
+        <section class="page" id="page-appointment">
+            <div class="panel">
+                <h2>Appointment Details</h2>
+
+                <form id="apptForm">
+                    <div class="grid2">
+                        <label>Patient Name
+                            <input name="patientName" required />
+                        </label>
+                        <label>Guardian's Name
+                            <input name="guardianName" required />
+                        </label>
+                        <label>Date of Birth
+                            <input type="date" name="dob" required />
+                        </label>
+                        <label>Phone
+                            <input name="phone" required />
+                        </label>
+                        <label>Email
+                            <input type="email" name="email" />
+                        </label>
+                        <label>Date of Appointment
+                            <input type="date" name="date" required />
+                        </label>
+                    </div>
+
+                    <label>Residential Address
+                        <textarea name="address" rows="3" required></textarea>
+                    </label>
+
+                    <div class="row gap">
+                        <button class="btn" data-route="treatments" type="button">← Back</button>
+                        <button class="btn btn-primary" type="submit">Proceed to Payment</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- PAYMENT -->
+        <section class="page" id="page-payment">
+            <div class="panel">
+                <h2>Payment</h2>
+                <p class="muted">Choose a payment method:</p>
+
+                <div class="pay-grid">
+                    <label class="pay-option">
+                        <input type="radio" name="pay" value="UPI" /> UPI
+                    </label>
+                    <label class="pay-option">
+                        <input type="radio" name="pay" value="Net Banking" /> Net Banking
+                    </label>
+                    <label class="pay-option">
+                        <input type="radio" name="pay" value="Debit Card" /> Debit Card
+                    </label>
+                </div>
+
+                <div class="row gap">
+                    <button class="btn" data-route="appointment">← Back</button>
+                    <button class="btn btn-primary" id="payNow" disabled>Pay Now</button>
+                </div>
+            </div>
+
+            <!-- Payment success pop-up -->
+            <dialog id="payDialog">
+                <h3>Payment Complete ✅</h3>
+                <p>Your payment was successful.</p>
+                <div class="row gap">
+                    <button class="btn" id="closePayDialog">OK</button>
+                </div>
+            </dialog>
+        </section>
+
+        <!-- CONFIRMATION + RECEIPT -->
+        <section class="page" id="page-done">
+            <div class="panel">
+                <h2>Appointment Confirmed 🎉</h2>
+                <p>Token No: <strong id="finalToken"></strong> • Current Serving: <strong id="currentServing"></strong>
+                </p>
+
+                <div class="row gap">
+                    <button class="btn" id="downloadJpg">Download Receipt (JPG)</button>
+                    <button class="btn btn-white" data-route="home">Go to Home</button>
+                </div>
+
+                <!-- Canvas for JPG (hidden) -->
+                <canvas id="receiptCanvas" width="1000" height="1400" class="hide"></canvas>
+            </div>
+        </section>
+
+        <!-- Other existing pages... -->
+        <section class="page" id="page-about">
+            <div class="panel">
+                <h2>About</h2>
+                <p>The Smart Queue and Token Management System is designed to reduce long waiting times in government
+                    hospitals. It allows patients to book appointments online, receive a digital token, and track the
+                    current serving number in real time. This helps minimize overcrowding and improves the overall
+                    hospital experience. The system also provides dashboards for doctors and hospital staff to manage
+                    patient queues efficiently.</p>
+            </div>
+        </section>
+
+        <section class="page" id="page-contact">
+            <div class="panel">
+                <h2>Contact</h2>
+                <p>Email: isaad78622@gmail.com</p>
+                <p>Phone No. 9163996447</p>
+            </div>
+        </section>
+
+        <section class="page" id="page-feedback">
+            <div class="panel">
+                <h2>Feedback</h2>
+                <textarea id="feedback-input" placeholder="Please enter your feedback"
+                    style="width: 100%; height: 120px; margin: 20px 0; padding: 15px; border: 2px solid #ccc; border-radius: 10px;"></textarea>
+                <button id="feedback-submit" class="btn btn-primary">Submit</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">© <span id="year"></span> Medi-Tech Team</footer>
+    <script>
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement(
+            {
+              pageLanguage: 'en',
+              includedLanguages: 'en,hi,bn,ta,te,ur,gu,kn,ml,mr,pa',
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            },
+            'google_translate_element'
+          );
+        }
+        </script>
+        
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="final.js"></script>
+</body>
+
+</html>
