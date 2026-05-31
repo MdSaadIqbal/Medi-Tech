@@ -1,0 +1,72 @@
+Patient Name,Age,Treatment department,Government Hospital in Kolkata,Waiting time (in minutes)
+Sahibul Akram,between 11-20,ENT (Otorhinolaryngology),Chittaranjan National Cancer Institute (CNCI),30-60
+suparno das,between 31-40,Dermatology,Chittaranjan National Cancer Institute (CNCI),60-90
+akansha kumari,between 21-30,Gastroenterology (SDLD),Chittaranjan National Cancer Institute (CNCI),30-60
+madhurima,between 21-30,Medicine,Chittaranjan National Cancer Institute (CNCI),1-30
+Naushad,between 31-40,Orthopedics,Chittaranjan National Cancer Institute (CNCI),120-150
+Siddika khatoon,between 51-60,Orthopedics,Chittaranjan National Cancer Institute (CNCI),120-150
+kasturi begam,between 31-40,Orthopedics,Chittaranjan National Cancer Institute (CNCI),120-150
+shuprabahat naskar,between 21-30,Medicine,Chittaranjan National Cancer Institute (CNCI),more than 180
+Krishna,between 61-70,Medicine,Chittaranjan National Cancer Institute (CNCI),more than 180
+ramzan ,between 21-30,Dermatology,Chittaranjan National Cancer Institute (CNCI),120-150
+P01,between 21-30,Dermatology,Chittaranjan National Cancer Institute (CNCI),150-180
+P02,between 21-30,Dermatology,Chittaranjan National Cancer Institute (CNCI),150-180
+P03,between 51-60,Dermatology,Chittaranjan National Cancer Institute (CNCI),more than 180
+P04,between 51-60,Dermatology,Chittaranjan National Cancer Institute (CNCI),150-180
+haripada naskara,between 51-60,Dermatology,Chittaranjan National Cancer Institute (CNCI),150-180
+samad aehsan,between 61-70,Orthopedics,Chittaranjan National Cancer Institute (CNCI),more than 180
+P07,between 51-60,Orthopedics,Chittaranjan National Cancer Institute (CNCI),more than 180
+P08,between 61-70,Orthopedics,Chittaranjan National Cancer Institute (CNCI),150-180
+P09,between 51-60,Orthopedics,Chittaranjan National Cancer Institute (CNCI),more than 180
+P10,more than 70,Orthopedics,Chittaranjan National Cancer Institute (CNCI),150-180
+amrita pal,between 51-60,Cardiology & Cardiothoracic & Vascular Surgery,Chittaranjan National Cancer Institute (CNCI),150-180
+sweta ghosh,between 61-70,Cardiology & Cardiothoracic & Vascular Surgery,Chittaranjan National Cancer Institute (CNCI),more than 180
+anushrimiti sinha,between 31-40,Cardiology & Cardiothoracic & Vascular Surgery,Chittaranjan National Cancer Institute (CNCI),150-180
+P13,between 11-20,ENT (Otorhinolaryngology),Chittaranjan National Cancer Institute (CNCI),120-150
+P14,between 1-10,ENT (Otorhinolaryngology),Chittaranjan National Cancer Institute (CNCI),120-150
+P15,between 31-40,ENT (Otorhinolaryngology),Chittaranjan National Cancer Institute (CNCI),150-180
+P15,between 41-50,ENT (Otorhinolaryngology),Chittaranjan National Cancer Institute (CNCI),120-150
+mansoor ilahi,between 21-30,Medicine,Chittaranjan National Cancer Institute (CNCI),150-180
+sihibam saha,between 21-30,Medicine,Chittaranjan National Cancer Institute (CNCI),120-150
+P18,between 31-40,Medicine,Chittaranjan National Cancer Institute (CNCI),120-150
+P19,between 41-50,Medicine,Chittaranjan National Cancer Institute (CNCI),150-180
+P20,between 51-60,Medicine,Chittaranjan National Cancer Institute (CNCI),more than 180
+P21,between 11-20,ENT (Otorhinolaryngology),IPGMER & SSKM Hospital (IPGME&R),150-180
+P22,between 31-40,ENT (Otorhinolaryngology),IPGMER & SSKM Hospital (IPGME&R),more than 180
+arkur mondal,between 41-50,ENT (Otorhinolaryngology),IPGMER & SSKM Hospital (IPGME&R),more than 180
+P24,between 51-60,ENT (Otorhinolaryngology),IPGMER & SSKM Hospital (IPGME&R),more than 180
+rakesh karmakar,between 41-50,ENT (Otorhinolaryngology),IPGMER & SSKM Hospital (IPGME&R),more than 180
+P26,between 21-30,Medicine,IPGMER & SSKM Hospital (IPGME&R),150-180
+P27,between 31-40,Medicine,IPGMER & SSKM Hospital (IPGME&R),150-180
+P28,between 41-50,Medicine,IPGMER & SSKM Hospital (IPGME&R),150-180
+P29,between 51-60,Medicine,IPGMER & SSKM Hospital (IPGME&R),150-180
+P30,between 51-60,Medicine,IPGMER & SSKM Hospital (IPGME&R),more than 180
+P31,between 1-10,Pediatrics & Pediatric Surgery,IPGMER & SSKM Hospital (IPGME&R),120-150
+P32,between 1-10,Pediatrics & Pediatric Surgery,IPGMER & SSKM Hospital (IPGME&R),120-150
+P33,between 1-10,Pediatrics & Pediatric Surgery,IPGMER & SSKM Hospital (IPGME&R),150-180
+P34,between 11-20,Pediatrics & Pediatric Surgery,IPGMER & SSKM Hospital (IPGME&R),150-180
+sattwik dinda,between 1-10,Pediatrics & Pediatric Surgery,IPGMER & SSKM Hospital (IPGME&R),120-150
+sayan das,between 21-30,Gastroenterology (SDLD),IPGMER & SSKM Hospital (IPGME&R),120-150
+anurima ghosh,between 31-40,Gastroenterology (SDLD),IPGMER & SSKM Hospital (IPGME&R),120-150
+chanchorika naskar,between 41-50,Gastroenterology (SDLD),IPGMER & SSKM Hospital (IPGME&R),150-180
+upasna,between 51-60,Gastroenterology (SDLD),IPGMER & SSKM Hospital (IPGME&R),150-180
+P40,between 61-70,Gastroenterology (SDLD),IPGMER & SSKM Hospital (IPGME&R),120-150
+P41,between 41-50,Orthopedics,IPGMER & SSKM Hospital (IPGME&R),150-180
+P42,between 51-60,Orthopedics,IPGMER & SSKM Hospital (IPGME&R),150-180
+P43,between 61-70,Orthopedics,IPGMER & SSKM Hospital (IPGME&R),120-150
+P44,between 51-60,Orthopedics,IPGMER & SSKM Hospital (IPGME&R),120-150
+P45,between 21-30,Gynecology & Obstetrics,R. G. Kar Medical College & Hospital,120-150
+P46,between 21-30,Gynecology & Obstetrics,R. G. Kar Medical College & Hospital,120-150
+P47,between 31-40,Gynecology & Obstetrics,R. G. Kar Medical College & Hospital,90-120
+P48,between 31-40,Gynecology & Obstetrics,R. G. Kar Medical College & Hospital,120-150
+P50,between 51-60,Ophthalmology,R. G. Kar Medical College & Hospital,90-120
+P51,between 61-70,Ophthalmology,R. G. Kar Medical College & Hospital,90-120
+P52,between 61-70,Ophthalmology,R. G. Kar Medical College & Hospital,90-120
+P54,more than 70,Ophthalmology,R. G. Kar Medical College & Hospital,120-150
+P56,between 1-10,Pediatrics & Pediatric Surgery,R. G. Kar Medical College & Hospital,90-120
+P57,between 1-10,Pediatrics & Pediatric Surgery,R. G. Kar Medical College & Hospital,60-90
+P58,between 1-10,Ophthalmology,R. G. Kar Medical College & Hospital,90-120
+P59,between 11-20,ENT (Otorhinolaryngology),R. G. Kar Medical College & Hospital,120-150
+P50,between 31-40,ENT (Otorhinolaryngology),R. G. Kar Medical College & Hospital,120-150
+P60,between 31-40,ENT (Otorhinolaryngology),R. G. Kar Medical College & Hospital,120-150
+P62,between 41-50,ENT (Otorhinolaryngology),R. G. Kar Medical College & Hospital,120-150
